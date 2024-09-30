@@ -34,3 +34,13 @@ Route::get('/predictionz/{nameofperson}', [App\Http\Controllers\sampleapi\TarotR
 // Group5 3C
 
 // Group6 3C
+Route::group(['prefix' => 'oracle'], function () {
+    // Get all oracle cards
+    Route::get('/cards', [App\Http\Controllers\threec\OracleController::class, 'index'])->name('oracle.index');
+
+    // Draw a random oracle card
+    Route::get('/draw', [App\Http\Controllers\threec\OracleController::class, 'draw'])->name('oracle.draw');
+
+    // Show a specific oracle card by ID
+    Route::get('/card/{id}', [App\Http\Controllers\threec\OracleController::class, 'show'])->name('oracle.show');
+});
