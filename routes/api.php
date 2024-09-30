@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/myapi/{namesauyab1}/{namesauyab2}', [App\Http\Controllers\sampleapi\ToldzApiController::class, 'loveCalculator'])->name('loveCalculator');
 
-Route::get('/panahon/{lugar}', [App\Http\Controllers\sampleapi\PanahonApiController::class, 'getPanahon'])->name('panahon');
+Route::get('/tarot/{nameofperson}', [App\Http\Controllers\sampleapi\TarotReaderController::class, 'tarot'])->name('tarot');
