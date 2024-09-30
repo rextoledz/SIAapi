@@ -9,7 +9,15 @@ class TarotReaderController extends Controller
 {
 	public function tarot(Request $request)
 	{
-		$nameofperson  = $request->nameofperson;
+	    // Validate that the name is provided
+	    $nameofperson = $request->input('nameofperson');
+	    
+	    if (!$nameofperson) {
+	        return response()->json([
+	            'error' => 'Please provide a name for the Tarot reading.'
+	        ], 400);
+	    }
+
 	    // Tarot cards or messages
 	    $tarotCards = [
 	        'The Fool' => 'New beginnings, optimism, trust in life',
@@ -44,8 +52,8 @@ class TarotReaderController extends Controller
 	    return response()->json([
 	        'person' => $nameofperson,
 	        'card' => $randomCard,
-	        'meaning' => $meaning
+	        'meaning' => $meaning,
+	        'explanation' => "The $randomCard card signifies $meaning. This card encourages you to reflect on how this concept may relate to your current life situation and decisions."
 	    ]);
 	}
-
 }
