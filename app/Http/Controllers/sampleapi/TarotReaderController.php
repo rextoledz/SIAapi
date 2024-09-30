@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 
 class TarotReaderController extends Controller
 {
-  	use Illuminate\Http\Request;
-
 	public function tarot(Request $request)
 	{
 		$nameofperson  = $request->nameofperson;
