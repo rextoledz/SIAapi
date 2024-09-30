@@ -9,8 +9,9 @@ class TarotReaderController extends Controller
 {
   	use Illuminate\Http\Request;
 
-	public function tarot(Request $request, $nameofperson)
+	public function tarot(Request $request)
 	{
+		$nameofperson  = $request->nameofperson;
 	    // Tarot cards or messages
 	    $tarotCards = [
 	        'The Fool' => 'New beginnings, optimism, trust in life',
