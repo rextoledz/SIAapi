@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/dashboard', [App\Http\Controllers\PermitAdmin\DashboardController::class, 'index'])->name('home');
+Route::get('/myapi/{namesauyab1}/{namesauyab2}', [App\Http\Controllers\sampleapi\ToldzApiController::class, 'loveCalculator'])->name('loveCalculator');
