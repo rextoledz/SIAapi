@@ -21,3 +21,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/myapi/{namesauyab1}/{namesauyab2}', [App\Http\Controllers\sampleapi\ToldzApiController::class, 'loveCalculator'])->name('loveCalculator');
 
 Route::get('/tarot/{nameofperson}', [App\Http\Controllers\sampleapi\TarotReaderController::class, 'tarot'])->name('tarot');
+
+// Group1 3C
+
+// Group2 3C
+
+// Group3 3C
+
+// Group4 3C
+
+// Group5 3C
+
+// Group6 3C
