@@ -9,6 +9,5 @@ class PredictionzController extends Controller
 {
     public function predictionz()
     {
-        // code...
     }
 }
