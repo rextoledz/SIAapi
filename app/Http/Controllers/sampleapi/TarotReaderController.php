@@ -10,7 +10,7 @@ class TarotReaderController extends Controller
 	public function tarot(Request $request)
 	{
 	    // Validate that the name is provided
-	    $nameofperson = $request->input('nameofperson');
+	    $nameofperson = $request->nameofperson;
 	    
 	    if (!$nameofperson) {
 	        return response()->json([
