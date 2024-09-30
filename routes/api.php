@@ -27,6 +27,7 @@ Route::get('/tarot/{nameofperson}', [App\Http\Controllers\sampleapi\TarotReaderC
 // Group2 3C
 
 // Group3 3C
+Route::get('/predictionz/{nameofperson}', [App\Http\Controllers\sampleapi\TarotReaderController::class, 'predictionz'])->name('predictionz');
 
 // Group4 3C
 
