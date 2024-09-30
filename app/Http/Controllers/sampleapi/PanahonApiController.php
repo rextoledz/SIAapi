@@ -9,7 +9,7 @@ class PanahonApiController extends Controller
 {
     public function getPanahon(Request $request)
     {
-    	if ($request->lugar == "Southern Leyte") {
+    	if ($request->lugar == "southernleyte") {
     		return "May katamtamang pag ulan ng nyebe";	
     	}
     }
